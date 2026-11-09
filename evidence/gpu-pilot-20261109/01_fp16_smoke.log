@@ -1,0 +1,10 @@
+### $ python autocast_backward_probe.py --device cuda --dtype fp16 --json artifacts/fp16_smoke.json
+Environment: {"bf16_supported": true, "cuda_runtime": "12.8", "cudnn_version": 90701, "device": "cuda", "driver_version": "610.74", "gpu": "NVIDIA GeForce RTX 3080 Laptop GPU", "gpu_capability": [8, 6], "platform": "Windows-10-10.0.26200-SP0", "python": "3.11.15", "torch": "2.7.0+cu128", "torch_git_version": "134179474539648ba7dee1317959529fbd0e7f89"}
+inside_shared: zero=0/39 missing=0 nonfinite=0 zero_adam=0 weak_pass=True losses=[0.471724, 0.456986, 0.470998] 
+nested_disabled: zero=0/39 missing=0 nonfinite=0 zero_adam=0 weak_pass=True losses=[0.471724, 0.456987, 0.470993] 
+inside_per_view: zero=0/39 missing=0 nonfinite=0 zero_adam=0 weak_pass=True losses=[0.471724, 0.456986, 0.470998] 
+outside_per_view: zero=0/39 missing=0 nonfinite=0 zero_adam=0 weak_pass=True losses=[0.471724, 0.456987, 0.470993] 
+Saved artifacts\fp16_smoke.json
+Observed zero gradients with falling loss in: []
+A causal claim requires matched controls and repeated CUDA results.
+### exit=0
