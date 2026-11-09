@@ -1,0 +1,62 @@
+== fp16_smoke.json  dtype=torch.float16 seed=17 tokens=128 width=32 depth=2 views=2 updates=3 checkpointing=True
+   torch=2.7.0+cu128 cuda=12.8 gpu=NVIDIA GeForce RTX 3080 Laptop GPU driver=610.74
+   initial_weights_matched=True distinct_sha=1 sha=78afed879a5c07c4... errors=0
+   inside_shared     bwd_autocast=[True] zero=0/39 live=39 missing=0 nonfinite=0 zero_adam=0 no_state=0 loss_decreased=True min_max|g|=4.770e-05 (blocks.0.attention.key.bias) t=2.375s
+   nested_disabled   bwd_autocast=[False] zero=0/39 live=39 missing=0 nonfinite=0 zero_adam=0 no_state=0 loss_decreased=True min_max|g|=4.778e-05 (blocks.0.attention.key.bias) t=0.297s
+   inside_per_view   bwd_autocast=[True] zero=0/39 live=39 missing=0 nonfinite=0 zero_adam=0 no_state=0 loss_decreased=True min_max|g|=4.770e-05 (blocks.0.attention.key.bias) t=0.281s
+   outside_per_view  bwd_autocast=[False] zero=0/39 live=39 missing=0 nonfinite=0 zero_adam=0 no_state=0 loss_decreased=True min_max|g|=4.778e-05 (blocks.0.attention.key.bias) t=0.266s
+   max|dloss| inside_shared vs inside_per_view   = 0.000e+00
+   max|dloss| nested_disabled vs outside_per_view = 0.000e+00
+   max|dloss| inside_shared vs nested_disabled    = 5.350e-06
+   max|dloss| inside_per_view vs outside_per_view = 5.350e-06
+   checklist: PASS
+== fp16_pilot_seed17.json  dtype=torch.float16 seed=17 tokens=1024 width=64 depth=3 views=4 updates=5 checkpointing=True
+   torch=2.7.0+cu128 cuda=12.8 gpu=NVIDIA GeForce RTX 3080 Laptop GPU driver=610.74
+   initial_weights_matched=True distinct_sha=1 sha=c9e6c79040acdf36... errors=0
+   inside_shared     bwd_autocast=[True] zero=0/55 live=55 missing=0 nonfinite=0 zero_adam=0 no_state=0 loss_decreased=True min_max|g|=7.434e-06 (blocks.1.attention.key.bias) t=3.375s
+   nested_disabled   bwd_autocast=[False] zero=0/55 live=55 missing=0 nonfinite=0 zero_adam=0 no_state=0 loss_decreased=True min_max|g|=7.404e-06 (blocks.1.attention.key.bias) t=1.313s
+   inside_per_view   bwd_autocast=[True] zero=0/55 live=55 missing=0 nonfinite=0 zero_adam=0 no_state=0 loss_decreased=True min_max|g|=7.434e-06 (blocks.1.attention.key.bias) t=1.453s
+   outside_per_view  bwd_autocast=[False] zero=0/55 live=55 missing=0 nonfinite=0 zero_adam=0 no_state=0 loss_decreased=True min_max|g|=7.404e-06 (blocks.1.attention.key.bias) t=1.39s
+   max|dloss| inside_shared vs inside_per_view   = 0.000e+00
+   max|dloss| nested_disabled vs outside_per_view = 0.000e+00
+   max|dloss| inside_shared vs nested_disabled    = 3.427e-06
+   max|dloss| inside_per_view vs outside_per_view = 3.427e-06
+   checklist: PASS
+== bf16_pilot_seed17.json  dtype=torch.bfloat16 seed=17 tokens=1024 width=64 depth=3 views=4 updates=5 checkpointing=True
+   torch=2.7.0+cu128 cuda=12.8 gpu=NVIDIA GeForce RTX 3080 Laptop GPU driver=610.74
+   initial_weights_matched=True distinct_sha=1 sha=c9e6c79040acdf36... errors=0
+   inside_shared     bwd_autocast=[True] zero=0/55 live=55 missing=0 nonfinite=0 zero_adam=0 no_state=0 loss_decreased=True min_max|g|=7.279e-06 (blocks.1.attention.key.bias) t=3.188s
+   nested_disabled   bwd_autocast=[False] zero=0/55 live=55 missing=0 nonfinite=0 zero_adam=0 no_state=0 loss_decreased=True min_max|g|=7.384e-06 (blocks.1.attention.key.bias) t=1.25s
+   inside_per_view   bwd_autocast=[True] zero=0/55 live=55 missing=0 nonfinite=0 zero_adam=0 no_state=0 loss_decreased=True min_max|g|=7.279e-06 (blocks.1.attention.key.bias) t=1.343s
+   outside_per_view  bwd_autocast=[False] zero=0/55 live=55 missing=0 nonfinite=0 zero_adam=0 no_state=0 loss_decreased=True min_max|g|=7.384e-06 (blocks.1.attention.key.bias) t=1.344s
+   max|dloss| inside_shared vs inside_per_view   = 0.000e+00
+   max|dloss| nested_disabled vs outside_per_view = 0.000e+00
+   max|dloss| inside_shared vs nested_disabled    = 1.669e-05
+   max|dloss| inside_per_view vs outside_per_view = 1.669e-05
+   checklist: PASS
+== fp16_pilot_seed29.json  dtype=torch.float16 seed=29 tokens=1024 width=64 depth=3 views=4 updates=5 checkpointing=True
+   torch=2.7.0+cu128 cuda=12.8 gpu=NVIDIA GeForce RTX 3080 Laptop GPU driver=610.74
+   initial_weights_matched=True distinct_sha=1 sha=16d59d5e3ecfa21e... errors=0
+   inside_shared     bwd_autocast=[True] zero=0/55 live=55 missing=0 nonfinite=0 zero_adam=0 no_state=0 loss_decreased=True min_max|g|=8.416e-06 (blocks.0.attention.key.bias) t=3.219s
+   nested_disabled   bwd_autocast=[False] zero=0/55 live=55 missing=0 nonfinite=0 zero_adam=0 no_state=0 loss_decreased=True min_max|g|=8.401e-06 (blocks.0.attention.key.bias) t=1.375s
+   inside_per_view   bwd_autocast=[True] zero=0/55 live=55 missing=0 nonfinite=0 zero_adam=0 no_state=0 loss_decreased=True min_max|g|=8.416e-06 (blocks.0.attention.key.bias) t=1.344s
+   outside_per_view  bwd_autocast=[False] zero=0/55 live=55 missing=0 nonfinite=0 zero_adam=0 no_state=0 loss_decreased=True min_max|g|=8.401e-06 (blocks.0.attention.key.bias) t=1.484s
+   max|dloss| inside_shared vs inside_per_view   = 0.000e+00
+   max|dloss| nested_disabled vs outside_per_view = 0.000e+00
+   max|dloss| inside_shared vs nested_disabled    = 1.192e-06
+   max|dloss| inside_per_view vs outside_per_view = 1.192e-06
+   checklist: PASS
+== fp16_pilot_seed43.json  dtype=torch.float16 seed=43 tokens=1024 width=64 depth=3 views=4 updates=5 checkpointing=True
+   torch=2.7.0+cu128 cuda=12.8 gpu=NVIDIA GeForce RTX 3080 Laptop GPU driver=610.74
+   initial_weights_matched=True distinct_sha=1 sha=6fedd748e447274a... errors=0
+   inside_shared     bwd_autocast=[True] zero=0/55 live=55 missing=0 nonfinite=0 zero_adam=0 no_state=0 loss_decreased=True min_max|g|=6.335e-06 (blocks.1.attention.key.bias) t=3.031s
+   nested_disabled   bwd_autocast=[False] zero=0/55 live=55 missing=0 nonfinite=0 zero_adam=0 no_state=0 loss_decreased=True min_max|g|=6.355e-06 (blocks.1.attention.key.bias) t=1.25s
+   inside_per_view   bwd_autocast=[True] zero=0/55 live=55 missing=0 nonfinite=0 zero_adam=0 no_state=0 loss_decreased=True min_max|g|=6.335e-06 (blocks.1.attention.key.bias) t=1.329s
+   outside_per_view  bwd_autocast=[False] zero=0/55 live=55 missing=0 nonfinite=0 zero_adam=0 no_state=0 loss_decreased=True min_max|g|=6.355e-06 (blocks.1.attention.key.bias) t=1.359s
+   max|dloss| inside_shared vs inside_per_view   = 0.000e+00
+   max|dloss| nested_disabled vs outside_per_view = 0.000e+00
+   max|dloss| inside_shared vs nested_disabled    = 1.576e-06
+   max|dloss| inside_per_view vs outside_per_view = 1.576e-06
+   checklist: PASS
+
+ALL CHECKLISTS PASS: True (5/5 files)

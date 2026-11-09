@@ -1,0 +1,47 @@
+### date: 2026-11-09T12:48:45-05:00
+### interpreter: [REDACTED: local conda env path]/python.exe
+### $ git rev-parse HEAD
+bbbd063383483fad31782e1fb3438bc07ec1fb24
+### $ nvidia-smi
+Mon Nov  9 12:48:46 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 610.74                 KMD Version: 610.74        CUDA UMD Version: 13.3     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                  Driver-Model | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA GeForce RTX 3080 ...  WDDM  |   00000000:01:00.0 Off |                  N/A |
+| N/A   55C    P8             12W /  115W |       0MiB /  16384MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|    0   N/A  N/A           [PID]    C+G   [REDACTED: unrelated desktop app]   N/A      |
++-----------------------------------------------------------------------------------------+
+### $ nvidia-smi --query-gpu=name,driver_version,memory.total,compute_cap --format=csv
+name, driver_version, memory.total [MiB], compute_cap
+NVIDIA GeForce RTX 3080 Laptop GPU, 610.74, 16384 MiB, 8.6
+### $ OS
+Microsoft Windows [Version 10.0.26200.9711]
+(c) Microsoft Corporation. All rights reserved.
+
+[REDACTED: local path]>### $ python -c env check
+3.11.15 | packaged by conda-forge | (main, Mar  5 2026, 16:36:00) [MSC v.1944 64 bit (AMD64)]
+2.7.0+cu128 12.8 True
+NVIDIA GeForce RTX 3080 Laptop GPU
+bf16_supported True
+cudnn 90701
+### $ python -m unittest discover -s tests -v
+test_cpu_autocast_scoping_and_shared_seed (test_probe_contract.ProbeContractTests.test_cpu_autocast_scoping_and_shared_seed) ... ok
+test_invalid_experiment_geometry_fails_fast (test_probe_contract.ProbeContractTests.test_invalid_experiment_geometry_fails_fast) ... ok
+test_zero_gradient_is_not_missing_or_nonfinite (test_probe_contract.ProbeContractTests.test_zero_gradient_is_not_missing_or_nonfinite) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 2.162s
+
+OK

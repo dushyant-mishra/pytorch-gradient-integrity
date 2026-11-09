@@ -1,0 +1,1669 @@
+{
+  "environment": {
+    "python": "3.11.15",
+    "torch": "2.7.0+cu128",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "device": "cuda",
+    "cuda_runtime": "12.8",
+    "torch_git_version": "134179474539648ba7dee1317959529fbd0e7f89",
+    "gpu": "NVIDIA GeForce RTX 3080 Laptop GPU",
+    "gpu_capability": [
+      8,
+      6
+    ],
+    "cudnn_version": 90701,
+    "bf16_supported": true,
+    "driver_version": "610.74"
+  },
+  "configuration": {
+    "tokens": 1024,
+    "width": 64,
+    "heads": 4,
+    "depth": 3,
+    "views": 4,
+    "batch": 4,
+    "microbatch": 2,
+    "blocks": 4,
+    "block_size": 8,
+    "updates": 5,
+    "learning_rate": 0.0003,
+    "seed": 29,
+    "checkpointing": true
+  },
+  "results": [
+    {
+      "mode": "inside_shared",
+      "dtype": "torch.float16",
+      "initial_student_sha256": "16d59d5e3ecfa21e94e22e4b40b92cb4ae288c73ad5ce073616b2b13561b9eeb",
+      "losses": [
+        0.35551536083221436,
+        0.34144438430666924,
+        0.3183264769613743,
+        0.3185380585491657,
+        0.30613307282328606
+      ],
+      "loss_decreased": true,
+      "backward_autocast_enabled": [
+        true
+      ],
+      "student_tensors": 55,
+      "zero_tensors": 0,
+      "missing_tensors": 0,
+      "nonfinite_tensors": 0,
+      "live_tensors": 55,
+      "weak_check_passes": true,
+      "zero_adam_moments": 0,
+      "no_adam_state": 0,
+      "by_role": {
+        "other": {
+          "total": 19,
+          "zero": 0,
+          "live": 19,
+          "missing": 0,
+          "nonfinite": 0
+        },
+        "norm1": {
+          "total": 6,
+          "zero": 0,
+          "live": 6,
+          "missing": 0,
+          "nonfinite": 0
+        },
+        "attention.query": {
+          "total": 6,
+          "zero": 0,
+          "live": 6,
+          "missing": 0,
+          "nonfinite": 0
+        },
+        "attention.key": {
+          "total": 6,
+          "zero": 0,
+          "live": 6,
+          "missing": 0,
+          "nonfinite": 0
+        },
+        "attention.value": {
+          "total": 6,
+          "zero": 0,
+          "live": 6,
+          "missing": 0,
+          "nonfinite": 0
+        },
+        "attention.output": {
+          "total": 6,
+          "zero": 0,
+          "live": 6,
+          "missing": 0,
+          "nonfinite": 0
+        },
+        "norm2": {
+          "total": 6,
+          "zero": 0,
+          "live": 6,
+          "missing": 0,
+          "nonfinite": 0
+        }
+      },
+      "gradients": [
+        {
+          "name": "identity.weight",
+          "role": "other",
+          "status": "live",
+          "max_abs_grad": 1.65574747370556e-05
+        },
+        {
+          "name": "features.weight",
+          "role": "other",
+          "status": "live",
+          "max_abs_grad": 0.0021659135818481445
+        },
+        {
+          "name": "features.bias",
+          "role": "other",
+          "status": "live",
+          "max_abs_grad": 0.005624294281005859
+        },
+        {
+          "name": "norm.weight",
+          "role": "other",
+          "status": "live",
+          "max_abs_grad": 0.004217128735035658
+        },
+        {
+          "name": "norm.bias",
+          "role": "other",
+          "status": "live",
+          "max_abs_grad": 0.006355450954288244
+        },
+        {
+          "name": "blocks.0.norm1.weight",
+          "role": "norm1",
+          "status": "live",
+          "max_abs_grad": 0.0008805732941254973
+        },
+        {
+          "name": "blocks.0.norm1.bias",
+          "role": "norm1",
+          "status": "live",
+          "max_abs_grad": 0.001375909661874175
+        },
+        {
+          "name": "blocks.0.attention.query.weight",
+          "role": "attention.query",
+          "status": "live",
+          "max_abs_grad": 1.2571457773447037e-05
+        },
+        {
+          "name": "blocks.0.attention.query.bias",
+          "role": "attention.query",
+          "status": "live",
+          "max_abs_grad": 1.2137927114963531e-05
+        },
+        {
+          "name": "blocks.0.attention.key.weight",
+          "role": "attention.key",
+          "status": "live",
+          "max_abs_grad": 5.973502993583679e-05
+        },
+        {
+          "name": "blocks.0.attention.key.bias",
+          "role": "attention.key",
+          "status": "live",
+          "max_abs_grad": 8.41636210680008e-06
+        },
+        {
+          "name": "blocks.0.attention.value.weight",
+          "role": "attention.value",
+          "status": "live",
+          "max_abs_grad": 0.0029387474060058594
+        },
+        {
+          "name": "blocks.0.attention.value.bias",
+          "role": "attention.value",
+          "status": "live",
+          "max_abs_grad": 0.0028123855590820312
+        },
+        {
+          "name": "blocks.0.attention.output.weight",
+          "role": "attention.output",
+          "status": "live",
+          "max_abs_grad": 0.005362987518310547
+        },
+        {
+          "name": "blocks.0.attention.output.bias",
+          "role": "attention.output",
+          "status": "live",
+          "max_abs_grad": 0.006346702575683594
+        },
+        {
+          "name": "blocks.0.norm2.weight",
+          "role": "norm2",
+          "status": "live",
+          "max_abs_grad": 0.0005835631163790822
+        },
+        {
+          "name": "blocks.0.norm2.bias",
+          "role": "norm2",
+          "status": "live",
+          "max_abs_grad": 0.0008347360417246819
+        },
+        {
+          "name": "blocks.0.ff.0.weight",
+          "role": "other",
+          "status": "live",
+          "max_abs_grad": 0.0018869638442993164
+        },
+        {
+          "name": "blocks.0.ff.0.bias",
+          "role": "other",
+          "status": "live",
+          "max_abs_grad": 0.0015616416931152344
+        },
+        {
+          "name": "blocks.0.ff.2.weight",
+          "role": "other",
+          "status": "live",
+          "max_abs_grad": 0.0053920745849609375
+        },
+        {
+          "name": "blocks.0.ff.2.bias",
+          "role": "other",
+          "status": "live",
+          "max_abs_grad": 0.006344795227050781
+        },
+        {
+          "name": "blocks.1.norm1.weight",
+          "role": "norm1",
+          "status": "live",
+          "max_abs_grad": 0.0011168870842084289
+        },
+        {
+          "name": "blocks.1.norm1.bias",
+          "role": "norm1",
+          "status": "live",
+          "max_abs_grad": 0.001758234342560172
+        },
+        {
+          "name": "blocks.1.attention.query.weight",
+          "role": "attention.query",
+          "status": "live",
+          "max_abs_grad": 1.9822269678115845e-05
+        },
+        {
+          "name": "blocks.1.attention.query.bias",
+          "role": "attention.query",
+          "status": "live",
+          "max_abs_grad": 1.534726470708847e-05
+        },
+        {
+          "name": "blocks.1.attention.key.weight",
+          "role": "attention.key",
+          "status": "live",
+          "max_abs_grad": 7.057562470436096e-05
+        },
+        {
+          "name": "blocks.1.attention.key.bias",
+          "role": "attention.key",
+          "status": "live",
+          "max_abs_grad": 1.0661780834197998e-05
+        },
+        {
+          "name": "blocks.1.attention.value.weight",
+          "role": "attention.value",
+          "status": "live",
+          "max_abs_grad": 0.004077434539794922
+        },
+        {
+          "name": "blocks.1.attention.value.bias",
+          "role": "attention.value",
+          "status": "live",
+          "max_abs_grad": 0.0031273365020751953
+        },
+        {
+          "name": "blocks.1.attention.output.weight",
+          "role": "attention.output",
+          "status": "live",
+          "max_abs_grad": 0.005376338958740234
+        },
+        {
+          "name": "blocks.1.attention.output.bias",
+          "role": "attention.output",
+          "status": "live",
+          "max_abs_grad": 0.006693840026855469
+        },
+        {
+          "name": "blocks.1.norm2.weight",
+          "role": "norm2",
+          "status": "live",
+          "max_abs_grad": 0.0011192136444151402
+        },
+        {
+          "name": "blocks.1.norm2.bias",
+          "role": "norm2",
+          "status": "live",
+          "max_abs_grad": 0.0008625040645711124
+        },
+        {
+          "name": "blocks.1.ff.0.weight",
+          "role": "other",
+          "status": "live",
+          "max_abs_grad": 0.002700328826904297
+        },
+        {
+          "name": "blocks.1.ff.0.bias",
+          "role": "other",
+          "status": "live",
+          "max_abs_grad": 0.0021533966064453125
+        },
+        {
+          "name": "blocks.1.ff.2.weight",
+          "role": "other",
+          "status": "live",
+          "max_abs_grad": 0.004533290863037109
+        },
+        {
+          "name": "blocks.1.ff.2.bias",
+          "role": "other",
+          "status": "live",
+          "max_abs_grad": 0.006440639495849609
+        },
+        {
+          "name": "blocks.2.norm1.weight",
+          "role": "norm1",
+          "status": "live",
+          "max_abs_grad": 0.001355651649646461
+        },
+        {
+          "name": "blocks.2.norm1.bias",
+          "role": "norm1",
+          "status": "live",
+          "max_abs_grad": 0.0021903812885284424
+        },
+        {
+          "name": "blocks.2.attention.query.weight",
+          "role": "attention.query",
+          "status": "live",
+          "max_abs_grad": 2.1437183022499084e-05
+        },
+        {
+          "name": "blocks.2.attention.query.bias",
+          "role": "attention.query",
+          "status": "live",
+          "max_abs_grad": 1.6001984477043152e-05
+        },
+        {
+          "name": "blocks.2.attention.key.weight",
+          "role": "attention.key",
+          "status": "live",
+          "max_abs_grad": 6.603822112083435e-05
+        },
+        {
+          "name": "blocks.2.attention.key.bias",
+          "role": "attention.key",
+          "status": "live",
+          "max_abs_grad": 9.636394679546356e-06
+        },
+        {
+          "name": "blocks.2.attention.value.weight",
+          "role": "attention.value",
+          "status": "live",
+          "max_abs_grad": 0.005023002624511719
+        },
+        {
+          "name": "blocks.2.attention.value.bias",
+          "role": "attention.value",
+          "status": "live",
+          "max_abs_grad": 0.003696918487548828
+        },
+        {
+          "name": "blocks.2.attention.output.weight",
+          "role": "attention.output",
+          "status": "live",
+          "max_abs_grad": 0.0046749114990234375
+        },
+        {
+          "name": "blocks.2.attention.output.bias",
+          "role": "attention.output",
+          "status": "live",
+          "max_abs_grad": 0.006334781646728516
+        },
+        {
+          "name": "blocks.2.norm2.weight",
+          "role": "norm2",
+          "status": "live",
+          "max_abs_grad": 0.0007894969312474132
+        },
+        {
+          "name": "blocks.2.norm2.bias",
+          "role": "norm2",
+          "status": "live",
+          "max_abs_grad": 0.0008432443137280643
+        },
+        {
+          "name": "blocks.2.ff.0.weight",
+          "role": "other",
+          "status": "live",
+          "max_abs_grad": 0.0020977258682250977
+        },
+        {
+          "name": "blocks.2.ff.0.bias",
+          "role": "other",
+          "status": "live",
+          "max_abs_grad": 0.001446366310119629
+        },
+        {
+          "name": "blocks.2.ff.2.weight",
+          "role": "other",
+          "status": "live",
+          "max_abs_grad": 0.003483295440673828
+        },
+        {
+          "name": "blocks.2.ff.2.bias",
+          "role": "other",
+          "status": "live",
+          "max_abs_grad": 0.005718231201171875
+        },
+        {
+          "name": "out.weight",
+          "role": "other",
+          "status": "live",
+          "max_abs_grad": 0.006465507671236992
+        },
+        {
+          "name": "out.bias",
+          "role": "other",
+          "status": "live",
+          "max_abs_grad": 0.005766034126281738
+        }
+      ],
+      "seconds": 3.219
+    },
+    {
+      "mode": "nested_disabled",
+      "dtype": "torch.float16",
+      "initial_student_sha256": "16d59d5e3ecfa21e94e22e4b40b92cb4ae288c73ad5ce073616b2b13561b9eeb",
+      "losses": [
+        0.35551536083221436,
+        0.34144460409879684,
+        0.3183276690542698,
+        0.31853847205638885,
+        0.30613313615322113
+      ],
+      "loss_decreased": true,
+      "backward_autocast_enabled": [
+        false
+      ],
+      "student_tensors": 55,
+      "zero_tensors": 0,
+      "missing_tensors": 0,
+      "nonfinite_tensors": 0,
+      "live_tensors": 55,
+      "weak_check_passes": true,
+      "zero_adam_moments": 0,
+      "no_adam_state": 0,
+      "by_role": {
+        "other": {
+          "total": 19,
+          "zero": 0,
+          "live": 19,
+          "missing": 0,
+          "nonfinite": 0
+        },
+        "norm1": {
+          "total": 6,
+          "zero": 0,
+          "live": 6,
+          "missing": 0,
+          "nonfinite": 0
+        },
+        "attention.query": {
+          "total": 6,
+          "zero": 0,
+          "live": 6,
+          "missing": 0,
+          "nonfinite": 0
+        },
+        "attention.key": {
+          "total": 6,
+          "zero": 0,
+          "live": 6,
+          "missing": 0,
+          "nonfinite": 0
+        },
+        "attention.value": {
+          "total": 6,
+          "zero": 0,
+          "live": 6,
+          "missing": 0,
+          "nonfinite": 0
+        },
+        "attention.output": {
+          "total": 6,
+          "zero": 0,
+          "live": 6,
+          "missing": 0,
+          "nonfinite": 0
+        },
+        "norm2": {
+          "total": 6,
+          "zero": 0,
+          "live": 6,
+          "missing": 0,
+          "nonfinite": 0
+        }
+      },
+      "gradients": [
+        {
+          "name": "identity.weight",
+          "role": "other",
+          "status": "live",
+          "max_abs_grad": 1.655790583754424e-05
+        },
+        {
+          "name": "features.weight",
+          "role": "other",
+          "status": "live",
+          "max_abs_grad": 0.0021659135818481445
+        },
+        {
+          "name": "features.bias",
+          "role": "other",
+          "status": "live",
+          "max_abs_grad": 0.005624294281005859
+        },
+        {
+          "name": "norm.weight",
+          "role": "other",
+          "status": "live",
+          "max_abs_grad": 0.00421685678884387
+        },
+        {
+          "name": "norm.bias",
+          "role": "other",
+          "status": "live",
+          "max_abs_grad": 0.006354972720146179
+        },
+        {
+          "name": "blocks.0.norm1.weight",
+          "role": "norm1",
+          "status": "live",
+          "max_abs_grad": 0.000880486040841788
+        },
+        {
+          "name": "blocks.0.norm1.bias",
+          "role": "norm1",
+          "status": "live",
+          "max_abs_grad": 0.0013757426058873534
+        },
+        {
+          "name": "blocks.0.attention.query.weight",
+          "role": "attention.query",
+          "status": "live",
+          "max_abs_grad": 1.2538861483335495e-05
+        },
+        {
+          "name": "blocks.0.attention.query.bias",
+          "role": "attention.query",
+          "status": "live",
+          "max_abs_grad": 1.2139324098825455e-05
+        },
+        {
+          "name": "blocks.0.attention.key.weight",
+          "role": "attention.key",
+          "status": "live",
+          "max_abs_grad": 5.971267819404602e-05
+        },
+        {
+          "name": "blocks.0.attention.key.bias",
+          "role": "attention.key",
+          "status": "live",
+          "max_abs_grad": 8.400529623031616e-06
+        },
+        {
+          "name": "blocks.0.attention.value.weight",
+          "role": "attention.value",
+          "status": "live",
+          "max_abs_grad": 0.002938508987426758
+        },
+        {
+          "name": "blocks.0.attention.value.bias",
+          "role": "attention.value",
+          "status": "live",
+          "max_abs_grad": 0.0028121471405029297
+        },
+        {
+          "name": "blocks.0.attention.output.weight",
+          "role": "attention.output",
+          "status": "live",
+          "max_abs_grad": 0.00536346435546875
+        },
+        {
+          "name": "blocks.0.attention.output.bias",
+          "role": "attention.output",
+          "status": "live",
+          "max_abs_grad": 0.006346702575683594
+        },
+        {
+          "name": "blocks.0.norm2.weight",
+          "role": "norm2",
+          "status": "live",
+          "max_abs_grad": 0.0005835337215103209
+        },
+        {
+          "name": "blocks.0.norm2.bias",
+          "role": "norm2",
+          "status": "live",
+          "max_abs_grad": 0.0008345738751813769
+        },
+        {
+          "name": "blocks.0.ff.0.weight",
+          "role": "other",
+          "status": "live",
+          "max_abs_grad": 0.0018867254257202148
+        },
+        {
+          "name": "blocks.0.ff.0.bias",
+          "role": "other",
+          "status": "live",
+          "max_abs_grad": 0.001561284065246582
+        },
+        {
+          "name": "blocks.0.ff.2.weight",
+          "role": "other",
+          "status": "live",
+          "max_abs_grad": 0.005393028259277344
+        },
+        {
+          "name": "blocks.0.ff.2.bias",
+          "role": "other",
+          "status": "live",
+          "max_abs_grad": 0.006343841552734375
+        },
+        {
+          "name": "blocks.1.norm1.weight",
+          "role": "norm1",
+          "status": "live",
+          "max_abs_grad": 0.001117067295126617
+        },
+        {
+          "name": "blocks.1.norm1.bias",
+          "role": "norm1",
+          "status": "live",
+          "max_abs_grad": 0.0017580455169081688
+        },
+        {
+          "name": "blocks.1.attention.query.weight",
+          "role": "attention.query",
+          "status": "live",
+          "max_abs_grad": 1.995079219341278e-05
+        },
+        {
+          "name": "blocks.1.attention.query.bias",
+          "role": "attention.query",
+          "status": "live",
+          "max_abs_grad": 1.5405938029289246e-05
+        },
+        {
+          "name": "blocks.1.attention.key.weight",
+          "role": "attention.key",
+          "status": "live",
+          "max_abs_grad": 7.058307528495789e-05
+        },
+        {
+          "name": "blocks.1.attention.key.bias",
+          "role": "attention.key",
+          "status": "live",
+          "max_abs_grad": 1.0664574801921844e-05
+        },
+        {
+          "name": "blocks.1.attention.value.weight",
+          "role": "attention.value",
+          "status": "live",
+          "max_abs_grad": 0.0040776729583740234
+        },
+        {
+          "name": "blocks.1.attention.value.bias",
+          "role": "attention.value",
+          "status": "live",
+          "max_abs_grad": 0.0031273365020751953
+        },
+        {
+          "name": "blocks.1.attention.output.weight",
+          "role": "attention.output",
+          "status": "live",
+          "max_abs_grad": 0.005374908447265625
+        },
+        {
+          "name": "blocks.1.attention.output.bias",
+          "role": "attention.output",
+          "status": "live",
+          "max_abs_grad": 0.006693363189697266
+        },
+        {
+          "name": "blocks.1.norm2.weight",
+          "role": "norm2",
+          "status": "live",
+          "max_abs_grad": 0.0011191407684236765
+        },
+        {
+          "name": "blocks.1.norm2.bias",
+          "role": "norm2",
+          "status": "live",
+          "max_abs_grad": 0.0008624517358839512
+        },
+        {
+          "name": "blocks.1.ff.0.weight",
+          "role": "other",
+          "status": "live",
+          "max_abs_grad": 0.0027005672454833984
+        },
+        {
+          "name": "blocks.1.ff.0.bias",
+          "role": "other",
+          "status": "live",
+          "max_abs_grad": 0.0021535158157348633
+        },
+        {
+          "name": "blocks.1.ff.2.weight",
+          "role": "other",
+          "status": "live",
+          "max_abs_grad": 0.004533290863037109
+        },
+        {
+          "name": "blocks.1.ff.2.bias",
+          "role": "other",
+          "status": "live",
+          "max_abs_grad": 0.006440639495849609
+        },
+        {
+          "name": "blocks.2.norm1.weight",
+          "role": "norm1",
+          "status": "live",
+          "max_abs_grad": 0.0013551663141697645
+        },
+        {
+          "name": "blocks.2.norm1.bias",
+          "role": "norm1",
+          "status": "live",
+          "max_abs_grad": 0.0021904953755438328
+        },
+        {
+          "name": "blocks.2.attention.query.weight",
+          "role": "attention.query",
+          "status": "live",
+          "max_abs_grad": 2.141110599040985e-05
+        },
+        {
+          "name": "blocks.2.attention.query.bias",
+          "role": "attention.query",
+          "status": "live",
+          "max_abs_grad": 1.598987728357315e-05
+        },
+        {
+          "name": "blocks.2.attention.key.weight",
+          "role": "attention.key",
+          "status": "live",
+          "max_abs_grad": 6.601959466934204e-05
+        },
+        {
+          "name": "blocks.2.attention.key.bias",
+          "role": "attention.key",
+          "status": "live",
+          "max_abs_grad": 9.631738066673279e-06
+        },
+        {
+          "name": "blocks.2.attention.value.weight",
+          "role": "attention.value",
+          "status": "live",
+          "max_abs_grad": 0.005021572113037109
+        },
+        {
+          "name": "blocks.2.attention.value.bias",
+          "role": "attention.value",
+          "status": "live",
+          "max_abs_grad": 0.0036962032318115234
+        },
+        {
+          "name": "blocks.2.attention.output.weight",
+          "role": "attention.output",
+          "status": "live",
+          "max_abs_grad": 0.004675388336181641
+        },
+        {
+          "name": "blocks.2.attention.output.bias",
+          "role": "attention.output",
+          "status": "live",
+          "max_abs_grad": 0.006333827972412109
+        },
+        {
+          "name": "blocks.2.norm2.weight",
+          "role": "norm2",
+          "status": "live",
+          "max_abs_grad": 0.000789402169175446
+        },
+        {
+          "name": "blocks.2.norm2.bias",
+          "role": "norm2",
+          "status": "live",
+          "max_abs_grad": 0.0008432032191194594
+        },
+        {
+          "name": "blocks.2.ff.0.weight",
+          "role": "other",
+          "status": "live",
+          "max_abs_grad": 0.0020977258682250977
+        },
+        {
+          "name": "blocks.2.ff.0.bias",
+          "role": "other",
+          "status": "live",
+          "max_abs_grad": 0.0014461278915405273
+        },
+        {
+          "name": "blocks.2.ff.2.weight",
+          "role": "other",
+          "status": "live",
+          "max_abs_grad": 0.003483295440673828
+        },
+        {
+          "name": "blocks.2.ff.2.bias",
+          "role": "other",
+          "status": "live",
+          "max_abs_grad": 0.005718708038330078
+        },
+        {
+          "name": "out.weight",
+          "role": "other",
+          "status": "live",
+          "max_abs_grad": 0.006465144455432892
+        },
+        {
+          "name": "out.bias",
+          "role": "other",
+          "status": "live",
+          "max_abs_grad": 0.0057656774297356606
+        }
+      ],
+      "seconds": 1.375
+    },
+    {
+      "mode": "inside_per_view",
+      "dtype": "torch.float16",
+      "initial_student_sha256": "16d59d5e3ecfa21e94e22e4b40b92cb4ae288c73ad5ce073616b2b13561b9eeb",
+      "losses": [
+        0.35551536083221436,
+        0.34144438430666924,
+        0.3183264769613743,
+        0.3185380585491657,
+        0.30613307282328606
+      ],
+      "loss_decreased": true,
+      "backward_autocast_enabled": [
+        true
+      ],
+      "student_tensors": 55,
+      "zero_tensors": 0,
+      "missing_tensors": 0,
+      "nonfinite_tensors": 0,
+      "live_tensors": 55,
+      "weak_check_passes": true,
+      "zero_adam_moments": 0,
+      "no_adam_state": 0,
+      "by_role": {
+        "other": {
+          "total": 19,
+          "zero": 0,
+          "live": 19,
+          "missing": 0,
+          "nonfinite": 0
+        },
+        "norm1": {
+          "total": 6,
+          "zero": 0,
+          "live": 6,
+          "missing": 0,
+          "nonfinite": 0
+        },
+        "attention.query": {
+          "total": 6,
+          "zero": 0,
+          "live": 6,
+          "missing": 0,
+          "nonfinite": 0
+        },
+        "attention.key": {
+          "total": 6,
+          "zero": 0,
+          "live": 6,
+          "missing": 0,
+          "nonfinite": 0
+        },
+        "attention.value": {
+          "total": 6,
+          "zero": 0,
+          "live": 6,
+          "missing": 0,
+          "nonfinite": 0
+        },
+        "attention.output": {
+          "total": 6,
+          "zero": 0,
+          "live": 6,
+          "missing": 0,
+          "nonfinite": 0
+        },
+        "norm2": {
+          "total": 6,
+          "zero": 0,
+          "live": 6,
+          "missing": 0,
+          "nonfinite": 0
+        }
+      },
+      "gradients": [
+        {
+          "name": "identity.weight",
+          "role": "other",
+          "status": "live",
+          "max_abs_grad": 1.65574747370556e-05
+        },
+        {
+          "name": "features.weight",
+          "role": "other",
+          "status": "live",
+          "max_abs_grad": 0.0021659135818481445
+        },
+        {
+          "name": "features.bias",
+          "role": "other",
+          "status": "live",
+          "max_abs_grad": 0.005624294281005859
+        },
+        {
+          "name": "norm.weight",
+          "role": "other",
+          "status": "live",
+          "max_abs_grad": 0.004217128735035658
+        },
+        {
+          "name": "norm.bias",
+          "role": "other",
+          "status": "live",
+          "max_abs_grad": 0.006355450954288244
+        },
+        {
+          "name": "blocks.0.norm1.weight",
+          "role": "norm1",
+          "status": "live",
+          "max_abs_grad": 0.0008805732941254973
+        },
+        {
+          "name": "blocks.0.norm1.bias",
+          "role": "norm1",
+          "status": "live",
+          "max_abs_grad": 0.001375909661874175
+        },
+        {
+          "name": "blocks.0.attention.query.weight",
+          "role": "attention.query",
+          "status": "live",
+          "max_abs_grad": 1.2571457773447037e-05
+        },
+        {
+          "name": "blocks.0.attention.query.bias",
+          "role": "attention.query",
+          "status": "live",
+          "max_abs_grad": 1.2137927114963531e-05
+        },
+        {
+          "name": "blocks.0.attention.key.weight",
+          "role": "attention.key",
+          "status": "live",
+          "max_abs_grad": 5.973502993583679e-05
+        },
+        {
+          "name": "blocks.0.attention.key.bias",
+          "role": "attention.key",
+          "status": "live",
+          "max_abs_grad": 8.41636210680008e-06
+        },
+        {
+          "name": "blocks.0.attention.value.weight",
+          "role": "attention.value",
+          "status": "live",
+          "max_abs_grad": 0.0029387474060058594
+        },
+        {
+          "name": "blocks.0.attention.value.bias",
+          "role": "attention.value",
+          "status": "live",
+          "max_abs_grad": 0.0028123855590820312
+        },
+        {
+          "name": "blocks.0.attention.output.weight",
+          "role": "attention.output",
+          "status": "live",
+          "max_abs_grad": 0.005362987518310547
+        },
+        {
+          "name": "blocks.0.attention.output.bias",
+          "role": "attention.output",
+          "status": "live",
+          "max_abs_grad": 0.006346702575683594
+        },
+        {
+          "name": "blocks.0.norm2.weight",
+          "role": "norm2",
+          "status": "live",
+          "max_abs_grad": 0.0005835631163790822
+        },
+        {
+          "name": "blocks.0.norm2.bias",
+          "role": "norm2",
+          "status": "live",
+          "max_abs_grad": 0.0008347360417246819
+        },
+        {
+          "name": "blocks.0.ff.0.weight",
+          "role": "other",
+          "status": "live",
+          "max_abs_grad": 0.0018869638442993164
+        },
+        {
+          "name": "blocks.0.ff.0.bias",
+          "role": "other",
+          "status": "live",
+          "max_abs_grad": 0.0015616416931152344
+        },
+        {
+          "name": "blocks.0.ff.2.weight",
+          "role": "other",
+          "status": "live",
+          "max_abs_grad": 0.0053920745849609375
+        },
+        {
+          "name": "blocks.0.ff.2.bias",
+          "role": "other",
+          "status": "live",
+          "max_abs_grad": 0.006344795227050781
+        },
+        {
+          "name": "blocks.1.norm1.weight",
+          "role": "norm1",
+          "status": "live",
+          "max_abs_grad": 0.0011168870842084289
+        },
+        {
+          "name": "blocks.1.norm1.bias",
+          "role": "norm1",
+          "status": "live",
+          "max_abs_grad": 0.001758234342560172
+        },
+        {
+          "name": "blocks.1.attention.query.weight",
+          "role": "attention.query",
+          "status": "live",
+          "max_abs_grad": 1.9822269678115845e-05
+        },
+        {
+          "name": "blocks.1.attention.query.bias",
+          "role": "attention.query",
+          "status": "live",
+          "max_abs_grad": 1.534726470708847e-05
+        },
+        {
+          "name": "blocks.1.attention.key.weight",
+          "role": "attention.key",
+          "status": "live",
+          "max_abs_grad": 7.057562470436096e-05
+        },
+        {
+          "name": "blocks.1.attention.key.bias",
+          "role": "attention.key",
+          "status": "live",
+          "max_abs_grad": 1.0661780834197998e-05
+        },
+        {
+          "name": "blocks.1.attention.value.weight",
+          "role": "attention.value",
+          "status": "live",
+          "max_abs_grad": 0.004077434539794922
+        },
+        {
+          "name": "blocks.1.attention.value.bias",
+          "role": "attention.value",
+          "status": "live",
+          "max_abs_grad": 0.0031273365020751953
+        },
+        {
+          "name": "blocks.1.attention.output.weight",
+          "role": "attention.output",
+          "status": "live",
+          "max_abs_grad": 0.005376338958740234
+        },
+        {
+          "name": "blocks.1.attention.output.bias",
+          "role": "attention.output",
+          "status": "live",
+          "max_abs_grad": 0.006693840026855469
+        },
+        {
+          "name": "blocks.1.norm2.weight",
+          "role": "norm2",
+          "status": "live",
+          "max_abs_grad": 0.0011192136444151402
+        },
+        {
+          "name": "blocks.1.norm2.bias",
+          "role": "norm2",
+          "status": "live",
+          "max_abs_grad": 0.0008625040645711124
+        },
+        {
+          "name": "blocks.1.ff.0.weight",
+          "role": "other",
+          "status": "live",
+          "max_abs_grad": 0.002700328826904297
+        },
+        {
+          "name": "blocks.1.ff.0.bias",
+          "role": "other",
+          "status": "live",
+          "max_abs_grad": 0.0021533966064453125
+        },
+        {
+          "name": "blocks.1.ff.2.weight",
+          "role": "other",
+          "status": "live",
+          "max_abs_grad": 0.004533290863037109
+        },
+        {
+          "name": "blocks.1.ff.2.bias",
+          "role": "other",
+          "status": "live",
+          "max_abs_grad": 0.006440639495849609
+        },
+        {
+          "name": "blocks.2.norm1.weight",
+          "role": "norm1",
+          "status": "live",
+          "max_abs_grad": 0.001355651649646461
+        },
+        {
+          "name": "blocks.2.norm1.bias",
+          "role": "norm1",
+          "status": "live",
+          "max_abs_grad": 0.0021903812885284424
+        },
+        {
+          "name": "blocks.2.attention.query.weight",
+          "role": "attention.query",
+          "status": "live",
+          "max_abs_grad": 2.1437183022499084e-05
+        },
+        {
+          "name": "blocks.2.attention.query.bias",
+          "role": "attention.query",
+          "status": "live",
+          "max_abs_grad": 1.6001984477043152e-05
+        },
+        {
+          "name": "blocks.2.attention.key.weight",
+          "role": "attention.key",
+          "status": "live",
+          "max_abs_grad": 6.603822112083435e-05
+        },
+        {
+          "name": "blocks.2.attention.key.bias",
+          "role": "attention.key",
+          "status": "live",
+          "max_abs_grad": 9.636394679546356e-06
+        },
+        {
+          "name": "blocks.2.attention.value.weight",
+          "role": "attention.value",
+          "status": "live",
+          "max_abs_grad": 0.005023002624511719
+        },
+        {
+          "name": "blocks.2.attention.value.bias",
+          "role": "attention.value",
+          "status": "live",
+          "max_abs_grad": 0.003696918487548828
+        },
+        {
+          "name": "blocks.2.attention.output.weight",
+          "role": "attention.output",
+          "status": "live",
+          "max_abs_grad": 0.0046749114990234375
+        },
+        {
+          "name": "blocks.2.attention.output.bias",
+          "role": "attention.output",
+          "status": "live",
+          "max_abs_grad": 0.006334781646728516
+        },
+        {
+          "name": "blocks.2.norm2.weight",
+          "role": "norm2",
+          "status": "live",
+          "max_abs_grad": 0.0007894969312474132
+        },
+        {
+          "name": "blocks.2.norm2.bias",
+          "role": "norm2",
+          "status": "live",
+          "max_abs_grad": 0.0008432443137280643
+        },
+        {
+          "name": "blocks.2.ff.0.weight",
+          "role": "other",
+          "status": "live",
+          "max_abs_grad": 0.0020977258682250977
+        },
+        {
+          "name": "blocks.2.ff.0.bias",
+          "role": "other",
+          "status": "live",
+          "max_abs_grad": 0.001446366310119629
+        },
+        {
+          "name": "blocks.2.ff.2.weight",
+          "role": "other",
+          "status": "live",
+          "max_abs_grad": 0.003483295440673828
+        },
+        {
+          "name": "blocks.2.ff.2.bias",
+          "role": "other",
+          "status": "live",
+          "max_abs_grad": 0.005718231201171875
+        },
+        {
+          "name": "out.weight",
+          "role": "other",
+          "status": "live",
+          "max_abs_grad": 0.006465507671236992
+        },
+        {
+          "name": "out.bias",
+          "role": "other",
+          "status": "live",
+          "max_abs_grad": 0.005766034126281738
+        }
+      ],
+      "seconds": 1.344
+    },
+    {
+      "mode": "outside_per_view",
+      "dtype": "torch.float16",
+      "initial_student_sha256": "16d59d5e3ecfa21e94e22e4b40b92cb4ae288c73ad5ce073616b2b13561b9eeb",
+      "losses": [
+        0.35551536083221436,
+        0.34144460409879684,
+        0.3183276690542698,
+        0.31853847205638885,
+        0.30613313615322113
+      ],
+      "loss_decreased": true,
+      "backward_autocast_enabled": [
+        false
+      ],
+      "student_tensors": 55,
+      "zero_tensors": 0,
+      "missing_tensors": 0,
+      "nonfinite_tensors": 0,
+      "live_tensors": 55,
+      "weak_check_passes": true,
+      "zero_adam_moments": 0,
+      "no_adam_state": 0,
+      "by_role": {
+        "other": {
+          "total": 19,
+          "zero": 0,
+          "live": 19,
+          "missing": 0,
+          "nonfinite": 0
+        },
+        "norm1": {
+          "total": 6,
+          "zero": 0,
+          "live": 6,
+          "missing": 0,
+          "nonfinite": 0
+        },
+        "attention.query": {
+          "total": 6,
+          "zero": 0,
+          "live": 6,
+          "missing": 0,
+          "nonfinite": 0
+        },
+        "attention.key": {
+          "total": 6,
+          "zero": 0,
+          "live": 6,
+          "missing": 0,
+          "nonfinite": 0
+        },
+        "attention.value": {
+          "total": 6,
+          "zero": 0,
+          "live": 6,
+          "missing": 0,
+          "nonfinite": 0
+        },
+        "attention.output": {
+          "total": 6,
+          "zero": 0,
+          "live": 6,
+          "missing": 0,
+          "nonfinite": 0
+        },
+        "norm2": {
+          "total": 6,
+          "zero": 0,
+          "live": 6,
+          "missing": 0,
+          "nonfinite": 0
+        }
+      },
+      "gradients": [
+        {
+          "name": "identity.weight",
+          "role": "other",
+          "status": "live",
+          "max_abs_grad": 1.655790583754424e-05
+        },
+        {
+          "name": "features.weight",
+          "role": "other",
+          "status": "live",
+          "max_abs_grad": 0.0021659135818481445
+        },
+        {
+          "name": "features.bias",
+          "role": "other",
+          "status": "live",
+          "max_abs_grad": 0.005624294281005859
+        },
+        {
+          "name": "norm.weight",
+          "role": "other",
+          "status": "live",
+          "max_abs_grad": 0.00421685678884387
+        },
+        {
+          "name": "norm.bias",
+          "role": "other",
+          "status": "live",
+          "max_abs_grad": 0.006354972720146179
+        },
+        {
+          "name": "blocks.0.norm1.weight",
+          "role": "norm1",
+          "status": "live",
+          "max_abs_grad": 0.000880486040841788
+        },
+        {
+          "name": "blocks.0.norm1.bias",
+          "role": "norm1",
+          "status": "live",
+          "max_abs_grad": 0.0013757426058873534
+        },
+        {
+          "name": "blocks.0.attention.query.weight",
+          "role": "attention.query",
+          "status": "live",
+          "max_abs_grad": 1.2538861483335495e-05
+        },
+        {
+          "name": "blocks.0.attention.query.bias",
+          "role": "attention.query",
+          "status": "live",
+          "max_abs_grad": 1.2139324098825455e-05
+        },
+        {
+          "name": "blocks.0.attention.key.weight",
+          "role": "attention.key",
+          "status": "live",
+          "max_abs_grad": 5.971267819404602e-05
+        },
+        {
+          "name": "blocks.0.attention.key.bias",
+          "role": "attention.key",
+          "status": "live",
+          "max_abs_grad": 8.400529623031616e-06
+        },
+        {
+          "name": "blocks.0.attention.value.weight",
+          "role": "attention.value",
+          "status": "live",
+          "max_abs_grad": 0.002938508987426758
+        },
+        {
+          "name": "blocks.0.attention.value.bias",
+          "role": "attention.value",
+          "status": "live",
+          "max_abs_grad": 0.0028121471405029297
+        },
+        {
+          "name": "blocks.0.attention.output.weight",
+          "role": "attention.output",
+          "status": "live",
+          "max_abs_grad": 0.00536346435546875
+        },
+        {
+          "name": "blocks.0.attention.output.bias",
+          "role": "attention.output",
+          "status": "live",
+          "max_abs_grad": 0.006346702575683594
+        },
+        {
+          "name": "blocks.0.norm2.weight",
+          "role": "norm2",
+          "status": "live",
+          "max_abs_grad": 0.0005835337215103209
+        },
+        {
+          "name": "blocks.0.norm2.bias",
+          "role": "norm2",
+          "status": "live",
+          "max_abs_grad": 0.0008345738751813769
+        },
+        {
+          "name": "blocks.0.ff.0.weight",
+          "role": "other",
+          "status": "live",
+          "max_abs_grad": 0.0018867254257202148
+        },
+        {
+          "name": "blocks.0.ff.0.bias",
+          "role": "other",
+          "status": "live",
+          "max_abs_grad": 0.001561284065246582
+        },
+        {
+          "name": "blocks.0.ff.2.weight",
+          "role": "other",
+          "status": "live",
+          "max_abs_grad": 0.005393028259277344
+        },
+        {
+          "name": "blocks.0.ff.2.bias",
+          "role": "other",
+          "status": "live",
+          "max_abs_grad": 0.006343841552734375
+        },
+        {
+          "name": "blocks.1.norm1.weight",
+          "role": "norm1",
+          "status": "live",
+          "max_abs_grad": 0.001117067295126617
+        },
+        {
+          "name": "blocks.1.norm1.bias",
+          "role": "norm1",
+          "status": "live",
+          "max_abs_grad": 0.0017580455169081688
+        },
+        {
+          "name": "blocks.1.attention.query.weight",
+          "role": "attention.query",
+          "status": "live",
+          "max_abs_grad": 1.995079219341278e-05
+        },
+        {
+          "name": "blocks.1.attention.query.bias",
+          "role": "attention.query",
+          "status": "live",
+          "max_abs_grad": 1.5405938029289246e-05
+        },
+        {
+          "name": "blocks.1.attention.key.weight",
+          "role": "attention.key",
+          "status": "live",
+          "max_abs_grad": 7.058307528495789e-05
+        },
+        {
+          "name": "blocks.1.attention.key.bias",
+          "role": "attention.key",
+          "status": "live",
+          "max_abs_grad": 1.0664574801921844e-05
+        },
+        {
+          "name": "blocks.1.attention.value.weight",
+          "role": "attention.value",
+          "status": "live",
+          "max_abs_grad": 0.0040776729583740234
+        },
+        {
+          "name": "blocks.1.attention.value.bias",
+          "role": "attention.value",
+          "status": "live",
+          "max_abs_grad": 0.0031273365020751953
+        },
+        {
+          "name": "blocks.1.attention.output.weight",
+          "role": "attention.output",
+          "status": "live",
+          "max_abs_grad": 0.005374908447265625
+        },
+        {
+          "name": "blocks.1.attention.output.bias",
+          "role": "attention.output",
+          "status": "live",
+          "max_abs_grad": 0.006693363189697266
+        },
+        {
+          "name": "blocks.1.norm2.weight",
+          "role": "norm2",
+          "status": "live",
+          "max_abs_grad": 0.0011191407684236765
+        },
+        {
+          "name": "blocks.1.norm2.bias",
+          "role": "norm2",
+          "status": "live",
+          "max_abs_grad": 0.0008624517358839512
+        },
+        {
+          "name": "blocks.1.ff.0.weight",
+          "role": "other",
+          "status": "live",
+          "max_abs_grad": 0.0027005672454833984
+        },
+        {
+          "name": "blocks.1.ff.0.bias",
+          "role": "other",
+          "status": "live",
+          "max_abs_grad": 0.0021535158157348633
+        },
+        {
+          "name": "blocks.1.ff.2.weight",
+          "role": "other",
+          "status": "live",
+          "max_abs_grad": 0.004533290863037109
+        },
+        {
+          "name": "blocks.1.ff.2.bias",
+          "role": "other",
+          "status": "live",
+          "max_abs_grad": 0.006440639495849609
+        },
+        {
+          "name": "blocks.2.norm1.weight",
+          "role": "norm1",
+          "status": "live",
+          "max_abs_grad": 0.0013551663141697645
+        },
+        {
+          "name": "blocks.2.norm1.bias",
+          "role": "norm1",
+          "status": "live",
+          "max_abs_grad": 0.0021904953755438328
+        },
+        {
+          "name": "blocks.2.attention.query.weight",
+          "role": "attention.query",
+          "status": "live",
+          "max_abs_grad": 2.141110599040985e-05
+        },
+        {
+          "name": "blocks.2.attention.query.bias",
+          "role": "attention.query",
+          "status": "live",
+          "max_abs_grad": 1.598987728357315e-05
+        },
+        {
+          "name": "blocks.2.attention.key.weight",
+          "role": "attention.key",
+          "status": "live",
+          "max_abs_grad": 6.601959466934204e-05
+        },
+        {
+          "name": "blocks.2.attention.key.bias",
+          "role": "attention.key",
+          "status": "live",
+          "max_abs_grad": 9.631738066673279e-06
+        },
+        {
+          "name": "blocks.2.attention.value.weight",
+          "role": "attention.value",
+          "status": "live",
+          "max_abs_grad": 0.005021572113037109
+        },
+        {
+          "name": "blocks.2.attention.value.bias",
+          "role": "attention.value",
+          "status": "live",
+          "max_abs_grad": 0.0036962032318115234
+        },
+        {
+          "name": "blocks.2.attention.output.weight",
+          "role": "attention.output",
+          "status": "live",
+          "max_abs_grad": 0.004675388336181641
+        },
+        {
+          "name": "blocks.2.attention.output.bias",
+          "role": "attention.output",
+          "status": "live",
+          "max_abs_grad": 0.006333827972412109
+        },
+        {
+          "name": "blocks.2.norm2.weight",
+          "role": "norm2",
+          "status": "live",
+          "max_abs_grad": 0.000789402169175446
+        },
+        {
+          "name": "blocks.2.norm2.bias",
+          "role": "norm2",
+          "status": "live",
+          "max_abs_grad": 0.0008432032191194594
+        },
+        {
+          "name": "blocks.2.ff.0.weight",
+          "role": "other",
+          "status": "live",
+          "max_abs_grad": 0.0020977258682250977
+        },
+        {
+          "name": "blocks.2.ff.0.bias",
+          "role": "other",
+          "status": "live",
+          "max_abs_grad": 0.0014461278915405273
+        },
+        {
+          "name": "blocks.2.ff.2.weight",
+          "role": "other",
+          "status": "live",
+          "max_abs_grad": 0.003483295440673828
+        },
+        {
+          "name": "blocks.2.ff.2.bias",
+          "role": "other",
+          "status": "live",
+          "max_abs_grad": 0.005718708038330078
+        },
+        {
+          "name": "out.weight",
+          "role": "other",
+          "status": "live",
+          "max_abs_grad": 0.006465144455432892
+        },
+        {
+          "name": "out.bias",
+          "role": "other",
+          "status": "live",
+          "max_abs_grad": 0.0057656774297356606
+        }
+      ],
+      "seconds": 1.484
+    }
+  ],
+  "initial_weights_matched": true,
+  "interpretation": "Exploratory synthetic test; zero tensor alone is not proof of a software defect."
+}

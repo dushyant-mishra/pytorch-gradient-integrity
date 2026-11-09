@@ -1,0 +1,10 @@
+### $ python autocast_backward_probe.py --device cuda --dtype fp16 --tokens 1024 --width 64 --heads 4 --depth 3 --views 4 --batch 4 --microbatch 2 --blocks 4 --block-size 8 --updates 5 --seed 43 --json artifacts/fp16_pilot_seed43.json
+Environment: {"bf16_supported": true, "cuda_runtime": "12.8", "cudnn_version": 90701, "device": "cuda", "driver_version": "610.74", "gpu": "NVIDIA GeForce RTX 3080 Laptop GPU", "gpu_capability": [8, 6], "platform": "Windows-10-10.0.26200-SP0", "python": "3.11.15", "torch": "2.7.0+cu128", "torch_git_version": "134179474539648ba7dee1317959529fbd0e7f89"}
+inside_shared: zero=0/55 missing=0 nonfinite=0 zero_adam=0 weak_pass=True losses=[0.419681, 0.409426, 0.400758, 0.391118, 0.38012] 
+nested_disabled: zero=0/55 missing=0 nonfinite=0 zero_adam=0 weak_pass=True losses=[0.419681, 0.409427, 0.400757, 0.391118, 0.380119] 
+inside_per_view: zero=0/55 missing=0 nonfinite=0 zero_adam=0 weak_pass=True losses=[0.419681, 0.409426, 0.400758, 0.391118, 0.38012] 
+outside_per_view: zero=0/55 missing=0 nonfinite=0 zero_adam=0 weak_pass=True losses=[0.419681, 0.409427, 0.400757, 0.391118, 0.380119] 
+Saved artifacts\fp16_pilot_seed43.json
+Observed zero gradients with falling loss in: []
+A causal claim requires matched controls and repeated CUDA results.
+### exit=0

@@ -1,0 +1,3 @@
+# Evidence files are stored byte-for-byte, with no end-of-line normalization,
+# so the SHA-256 values in PROVENANCE.md match a fresh clone on any OS.
+* -text
