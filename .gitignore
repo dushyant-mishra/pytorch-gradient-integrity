@@ -218,3 +218,8 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Local GPU experiment results; review before publication
+artifacts/
+*.gpu.log
+*.gpu.json
